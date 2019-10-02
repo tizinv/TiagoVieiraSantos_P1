@@ -1,10 +1,13 @@
 # Autor: Tiago Vieira Santos	
 # Valor de Pi
-for cont1 in range(1, 100000001, 2):
-    cont1**(-1)	
-    lista1 = []		
-    list.append(cont1)
-lista2 = [1, -1]* 100000000	
-listaf = lista1 * lista2	
-Valorpi = 4 * sum(listaf)	
-print("O valor de pi = {}",.format(Valorpi))
+diferenca = 1
+Valorpi = 0	
+divisor1 = 1
+divisor2 = 1
+while (diferenca > (5*10**(-8))):
+    pianterior = Valorpi
+    Valorpi += 4/(divisor1 * divisor2)
+    divisor1 += 2
+    divisor2 *= -1
+    diferenca = (pianterior - Valorpi) * divisor2
+print("O valor de pi = {}".format(Valorpi))
